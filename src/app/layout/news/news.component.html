@@ -5,48 +5,215 @@
       <div class="news-heading">
         News
       </div>
-      <div class="card-deck">
+      <div class="my-2 card-deck">
         <div class="card">
-          <img class="card-img-top" src="../../../assets/loading.gif" alt="Card image cap">
+          <img class="card-img-top" [src]="trendingNews[0].thumbnail" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">{{trendingNews[0].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[0].description}}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">{{trendingNews[0].publishedAt}}</small>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="../../../assets/loading.gif" alt="Card image cap">
+          <img class="card-img-top" [src]="trendingNews[1].thumbnail" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">{{trendingNews[1].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[1].description}}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">{{trendingNews[1].publishedAt}}</small>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="../../../assets/loading.gif" alt="Card image cap">
+          <img class="card-img-top" [src]="trendingNews[2].thumbnail" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <h5 class="card-title">{{trendingNews[2].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[2].description}}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">{{trendingNews[2].publishedAt}}</small>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="../../../assets/loading.gif" alt="Card image cap">
+          <img class="card-img-top" [src]="trendingNews[3].thumbnail" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <h5 class="card-title">{{trendingNews[3].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[3].description}}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">{{trendingNews[3].publishedAt}}</small>
           </div>
         </div>
-      </div>
+      </div >
+      <div class="my-2 card-deck">
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[4].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[4].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[4].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[4].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[5].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[5].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[5].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[5].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[6].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[6].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[6].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[6].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[7].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[7].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[7].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[7].publishedAt}}</small>
+          </div>
+        </div>
+      </div >
+      <div class="my-2 card-deck">
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[8].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[8].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[8].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[8].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[9].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[9].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[9].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[9].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[10].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[10].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[10].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[10].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[11].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[11].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[11].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[11].publishedAt}}</small>
+          </div>
+        </div>
+      </div >
+      <div class="my-2 card-deck">
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[16].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[16].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[16].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[16].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[13].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[13].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[13].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[13].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[14].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[14].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[14].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[14].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[15].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[15].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[15].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[15].publishedAt}}</small>
+          </div>
+        </div>
+      </div ><div class="my-2 card-deck">
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[12].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[12].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[12].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[12].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[17].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[17].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[17].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[17].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[18].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[18].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[18].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[18].publishedAt}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" [src]="trendingNews[19].thumbnail" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{trendingNews[19].coins[0].name}}</h5>
+            <p class="card-text">{{trendingNews[19].description}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{trendingNews[19].publishedAt}}</small>
+          </div>
+        </div>
+      </div >
     </div>
   </ng-template>
 </div>

@@ -13,8 +13,13 @@ import {FooterComponent} from './footer/footer.component';
 import {AppRoutingService} from './app-routing.service';
 import { LayoutComponent } from './layout/layout.component';
 import {BackendService} from "./backend.service";
-import {HttpClientModule} from "@angular/common/http";
-
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {Ng2OdometerModule} from "ng2-odometer";
+import {DisqusModule} from "ngx-disqus";
+import {CKEditorModule} from "ng2-ckeditor";
+import {FormsModule} from "@angular/forms";
+import {AuthInterceptor} from "./layout/auth/auth-interceptor";
+import {AuthGuard} from "./layout/auth/auth.guard";
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +37,13 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingService,
-    HttpClientModule
-    ],
-  providers: [BackendService],
+    HttpClientModule,
+    Ng2OdometerModule.forRoot(),
+    DisqusModule.forRoot('inassign'),
+    CKEditorModule,
+    FormsModule
+  ],
+  providers: [BackendService, AuthGuard, {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

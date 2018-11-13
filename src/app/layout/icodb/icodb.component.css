@@ -1,0 +1,79 @@
+header.masthead {
+  margin-top: 12vh;
+  position: relative;
+  background-color: #343a40;
+  background: url("../../../assets/background2.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+#icocontent, #products{
+  margin-top: 4vh;
+}
+#products{
+  margin-bottom: 8vh;
+}
+#icocontent #moreaboutus h5, #products #moreproducts h5{
+  text-align: center;
+}
+#quantity{
+  padding-bottom: 8vh;
+}
+#icocontent h5, #products h5{
+  text-align: center;
+  border: 2px solid #d56b00;
+  /*border-radius: 5px;*/
+  font-size: 14px;
+  font-weight: bold;
+  padding: 9px;
+  text-transform: uppercase;
+  color: #E16F00;
+  margin-bottom: 8vh;
+}
+#icocontent ul {
+  list-style: none;
+}
+
+#icocontent ul li::before {
+  content: "\2022";
+  color: #d56b00;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+#quantity{
+  margin: auto;
+}
+#counters{
+  margin-top: 8vh;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  font-weight: bold;
+  color: #d56b00;
+}

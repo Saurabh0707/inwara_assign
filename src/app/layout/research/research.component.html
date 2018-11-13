@@ -1,3 +1,23 @@
-<p>
-  research works!
-</p>
+<div id="editor">
+    <div id="editor-heading" class="offset-sm-2 col-sm-8">
+      <h5>Researches</h5>
+    </div>
+  <div id="editor-wrapper" class="offset-sm-2 col-sm-8">
+    <form role="form" #myForm="ngForm" accept-charset="UTF-8" novalidate>
+      <div class="form-group has-feedback"
+           [ngClass]="{ 'has-error': myckeditor.invalid && myckeditor.touched }">
+        <ckeditor [(ngModel)]="mycontent"
+                  #myckeditor="ngModel"
+                  name="myckeditor"
+                  required
+                  [config]="ckeConfig"
+                  debounce="500"
+                  (change)="onChange($event)">
+        </ckeditor>
+        <div *ngIf="myckeditor.invalid && myckeditor.touched" class="help-block">Required field.</div>
+      </div>
+      <button [disabled]="myForm.invalid" class="btn btn-primary">Save</button>
+    </form>
+    <div [innerHTML]="mycontent"></div>
+  </div>
+</div>

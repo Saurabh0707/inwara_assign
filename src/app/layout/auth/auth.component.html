@@ -1,3 +1,27 @@
-<p>
-  auth works!
-</p>
+<body id="LoginForm">
+<div class="container">
+  <div class="login-form">
+    <div class="main-div">
+      <div class="panel">
+        <h2>Admin Login</h2>
+        <p>Please enter your email and password</p>
+      </div>
+      <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading" id="Login">
+        <div class="form-group">
+          <input name="email" ngModel type="email" #emailInput="ngModel" class="form-control" id="inputEmail" placeholder="Email Address" required email >
+          <p class="text-muted" *ngIf="emailInput.invalid && !emailInput.pristine">Enter a valid email</p>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" ngModel #passwordInput="ngModel" required>
+          <p class="text-muted" *ngIf="passwordInput.invalid && !passwordInput.pristine">Enter a valid password</p>
+        </div>
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </div></div>
+
+
+</body>

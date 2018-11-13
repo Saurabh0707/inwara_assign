@@ -6,7 +6,10 @@
       <a class="nav-item nav-link" routerLink="/news">NEWS</a>
       <a class="nav-item nav-link" routerLink="/research">RESEARCH REPORT</a>
       <a class="nav-item nav-link" routerLink="/blog">BLOG</a>
-      <a class="nav-item nav-link" routerLink="/auth">LOGIN</a>
+      <a class="nav-item nav-link" *ngIf="!userIsAuthenticated; else loggedIn" routerLink="/auth">LOGIN</a>
+      <ng-template #loggedIn>
+        <a class="nav-item nav-link" (click)="onLogout()">LOGOUT</a>
+      </ng-template>
     </div>
   </div>
   <div class="navbar-expand ml-auto navbar-nav">
