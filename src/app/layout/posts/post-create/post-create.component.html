@@ -1,0 +1,85 @@
+<div class="news-heading" *ngIf="userIsAuthenticated">
+  Create Reports
+</div>
+<div id="editor2" *ngIf="userIsAuthenticated">
+  <mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="title"
+          [ngModel]="post?.title"
+          required
+          minlength="3"
+          placeholder="Report Title"
+          #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter a Report title.</mat-error>
+      </mat-form-field>
+      <div class="form-group has-feedback"
+           [ngClass]="{ 'has-error': content.invalid && content.touched }">
+        <ckeditor
+          placeholder="Report Content"
+          [ngModel]="post?.content"
+          #content="ngModel"
+          name="content"
+          required
+          [config]="ckeConfig"
+          debounce="500">
+        </ckeditor>
+        <div *ngIf="content.invalid && content.touched " class="help-block">Report cannot be empty.</div>
+      </div>
+      <button
+        mat-raised-button
+        color="warn"
+        type="submit"
+        *ngIf="!content.invalid && content.touched && !title.invalid && title.touched">Save Report</button>
+      <button
+        mat-raised-button
+        color="warn"
+        *ngIf="!content.invalid && content.touched && !title.invalid && title.touched"
+        (click)="printReport()"
+      >Print Report</button>
+    </form>
+  </mat-card>
+</div>
+<div id="editor3" *ngIf="!userIsAuthenticated && mode!='create'">
+  <mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form *ngIf="!isLoading">
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="title"
+          [ngModel]="post?.title"
+          required
+          minlength="3"
+          placeholder="Post Title"
+          #title="ngModel"
+        disabled>
+        <mat-error *ngIf="title.invalid">Please enter a Report Title.</mat-error>
+      </mat-form-field>
+      <div class="form-group has-feedback"
+           [ngClass]="{ 'has-error': content.invalid && content.touched }">
+        <ckeditor
+          placeholder="Report Content"
+          [ngModel]="post?.content"
+          #content="ngModel"
+          name="content"
+          required
+          [config]="ckeConfig"
+          debounce="500">
+        </ckeditor>
+        <div *ngIf="content.invalid && content.touched" class="help-block">Report cannot be empty.</div>
+      </div>
+      <button
+        mat-raised-button
+        color="warn"
+        *ngIf="!content.invalid && !title.invalid"
+        (click)="printReport()"
+      >Print Report</button>
+    </form>
+  </mat-card>
+</div>

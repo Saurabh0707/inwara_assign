@@ -5,7 +5,7 @@ import {HomeComponent} from './layout/home/home.component';
 import {IcodbComponent} from './layout/icodb/icodb.component';
 import {BlogComponent} from './layout/blog/blog.component';
 import {AuthComponent} from './layout/auth/auth.component';
-import {ResearchComponent} from './layout/research/research.component';
+import {PostsComponent} from './layout/posts/posts.component';
 import {PageNotFoundComponent} from './layout/page-not-found/page-not-found.component';
 import {NewsComponent} from './layout/news/news.component';
 import {HeaderComponent} from './header/header.component';
@@ -20,6 +20,13 @@ import {CKEditorModule} from "ng2-ckeditor";
 import {FormsModule} from "@angular/forms";
 import {AuthInterceptor} from "./layout/auth/auth-interceptor";
 import {AuthGuard} from "./layout/auth/auth.guard";
+import { PostCreateComponent } from './layout/posts/post-create/post-create.component';
+import { PostListComponent } from './layout/posts/post-list/post-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatButtonModule, MatCardModule, MatExpansionModule, MatInputModule, MatProgressSpinnerModule,
+  MatToolbarModule
+} from "@angular/material";
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +34,14 @@ import {AuthGuard} from "./layout/auth/auth.guard";
     IcodbComponent,
     BlogComponent,
     AuthComponent,
-    ResearchComponent,
+    PostsComponent,
     PageNotFoundComponent,
     NewsComponent,
     HeaderComponent,
     FooterComponent,
-    LayoutComponent
+    LayoutComponent,
+    PostCreateComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +50,19 @@ import {AuthGuard} from "./layout/auth/auth.guard";
     Ng2OdometerModule.forRoot(),
     DisqusModule.forRoot('inassign'),
     CKEditorModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatExpansionModule,
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [BackendService, AuthGuard, {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]

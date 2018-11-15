@@ -1,0 +1,25 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}
+#editor2, #editor3{
+  margin-top: 4vh;
+  margin-bottom: 10vh;
+  margin-left: 8vh;
+  margin-right: 8vh;
+}
+.news-heading{
+  text-align: center;
+  border: 2px solid #d56b00;
+  /*border-radius: 5px;*/
+  font-size: 14px;
+  font-weight: bold;
+  padding: 9px;
+  text-transform: uppercase;
+  color: #E16F00;
+  margin-bottom: 8vh;
+}
